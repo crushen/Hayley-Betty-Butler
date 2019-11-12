@@ -1,25 +1,29 @@
 <template>
   <div>
     <div class="nav-bar"></div>
+    <img :src="logo" alt="" class="logo">
     <div class="burger" @click="toggleNav">
       <div class="burger-bar"></div>
     </div>
     <transition name="slide" enter-active-class="animated slideInDown faster" leave-active-class="animated slideOutUp faster">
       <nav class="nav" v-if="navActive">
-        <a href="#home">Home</a>
-        <a href="#collections">Collections</a>
-        <a href="solo-pieces">Solo Pieces</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" class="nav-link animated fadeInRight">Home</a>
+        <a href="#collections" class="nav-link animated fadeInRight">Collections</a>
+        <a href="solo-pieces" class="nav-link animated fadeInRight">Solo Pieces</a>
+        <a href="#contact" class="nav-link animated fadeInRight">Contact</a>
       </nav>
     </transition>
   </div>
 </template>
 
 <script>
+import logo from '../../assets/logo4.svg';
+
 export default {
   data() {
     return {
-      navActive: false
+      navActive: false,
+      logo
     }
   },
   methods: {
@@ -49,6 +53,34 @@ function noScroll() {
 </script>
 
 <style scoped>
+  .nav-link {
+    animation-duration: 0.5s;
+  }
+
+  .nav-link:nth-of-type(1) {
+    animation-delay: 0.3s;
+  }
+
+  .nav-link:nth-of-type(2) {
+    animation-delay: 0.4s;
+  }
+
+  .nav-link:nth-of-type(3) {
+    animation-delay: 0.5s;
+  }
+
+  .nav-link:nth-of-type(4) {
+    animation-delay: 0.6s;
+  }
+
+  .logo {
+    width: 60px;
+    position: fixed;
+    z-index: 30;
+    top: 13px;
+    left: 10px;
+  }
+
   .nav-bar {
     position: fixed;
     top: 0;
@@ -61,7 +93,7 @@ function noScroll() {
   .burger {
     position: fixed;
     top: 0;
-    right: 5%;
+    right: 0;
     width: 60px;
     height: 60px;
     cursor: pointer;
@@ -72,7 +104,7 @@ function noScroll() {
   .burger-bar {
     width: 35px;
     height: 4px;
-    background: blue;
+    background: white;
     position: relative;
     top: 50%;
     left: 50%;
@@ -84,7 +116,7 @@ function noScroll() {
     content: '';
     width:35px;
     height: 4px;
-    background: blue;
+    background: white;
     position: absolute;
     transition: 0.4s;
   }
@@ -113,12 +145,12 @@ function noScroll() {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: red;
+    background: black;
     z-index: 20;
   }
   .nav a {
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 600;
     color: white;
     border-bottom: 4px solid transparent;
     margin: 16px;
