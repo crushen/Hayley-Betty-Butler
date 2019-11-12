@@ -1,11 +1,9 @@
 <template>
-  <div id="home">
+  <section id="home">
     <div class="background-container" :style="{backgroundImage: `url(${backgroundMobile})`}">
       <h1>Hayley<br>Betty Butler</h1>
     </div>
-
-    <div style="height: 500px"></div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -37,6 +35,8 @@ export default {
   h1 {
     color: white;
     font-size: 55px;
+    font-weight: 800;
+    position: fixed;
   }
   
 </style>

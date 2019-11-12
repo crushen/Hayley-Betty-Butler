@@ -78,7 +78,7 @@ function noScroll() {
     position: fixed;
     z-index: 30;
     top: 13px;
-    left: 10px;
+    left: 5%;
   }
 
   .nav-bar {
@@ -93,7 +93,7 @@ function noScroll() {
   .burger {
     position: fixed;
     top: 0;
-    right: 0;
+    right: 3%;
     width: 60px;
     height: 60px;
     cursor: pointer;
@@ -145,7 +145,7 @@ function noScroll() {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: black;
+    background: #0d0d0d;
     z-index: 20;
   }
   .nav a {
