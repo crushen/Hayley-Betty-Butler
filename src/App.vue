@@ -28,12 +28,27 @@ export default {
   font-family: 'Muli', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: white;
+  background: #171717;
+}
+
+.content {
+  width: 85%;
+  margin: auto;
+}
+
+p {
+  font-size: 18px;
 }
 
 a {
   text-decoration: none;
 }
+
+
+
+
+
 
 /* Mobile */
 #nav {
