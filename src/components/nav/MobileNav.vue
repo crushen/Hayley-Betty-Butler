@@ -149,7 +149,7 @@ function noScroll() {
     z-index: 20;
   }
   .nav a {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     color: white;
     border-bottom: 4px solid transparent;
