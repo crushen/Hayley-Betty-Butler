@@ -32,17 +32,22 @@ export default {
   background: #171717;
 }
 
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+a {
+  text-decoration: none;
+}
+
 .content {
   width: 85%;
   margin: auto;
 }
 
-p {
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
+.section-padding {
+  padding: 60px 0;
 }
 
 
