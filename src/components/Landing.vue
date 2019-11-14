@@ -26,10 +26,11 @@ export default {
     background-size: 126%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    z-index: -20;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 0;
   }
 
   h1 {
@@ -37,6 +38,7 @@ export default {
     font-size: 55px;
     font-weight: 800;
     position: fixed;
+    z-index: 0;
   }
   
 </style>
