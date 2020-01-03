@@ -19,6 +19,10 @@ export default {
 </script>
 
 <style>
+:root {
+  --background: #171717;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -29,7 +33,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
-  background: #171717;
+  background: var(--background);
 }
 
 p {

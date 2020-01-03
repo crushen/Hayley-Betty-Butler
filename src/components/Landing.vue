@@ -3,6 +3,12 @@
     <div class="background-container" :style="{backgroundImage: `url(${backgroundMobile})`}">
       <h1>Hayley<br>Betty Butler</h1>
     </div>
+    <div class="section-padding bio">
+      <div class="content">
+        <p>A South London artist, singer/songwriter. Working with a variety of mediums to create pieces of work that explore emotion, colour, texture and light.</p> 
+        <p>Her art, words and music interrogate what it is to be human.</p>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -35,10 +41,21 @@ export default {
 
   h1 {
     color: white;
-    font-size: 55px;
+    font-size: 13vw;
     font-weight: 800;
     position: fixed;
     z-index: 0;
+  }
+
+  .bio {
+    position: relative;
+    z-index: 10;
+    background: var(--background);
+    font-weight: bold;
+  }
+
+  p:not(:first-of-type) {
+    margin-top: 16px;
   }
   
 </style>
