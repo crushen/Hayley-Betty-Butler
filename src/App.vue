@@ -21,6 +21,7 @@ export default {
 <style>
 :root {
   --background: #171717;
+  --text: #FFF;
 }
 
 * {
@@ -32,28 +33,30 @@ export default {
   font-family: 'Muli', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
+  color: var(--text);
   background: var(--background);
 }
 
 p {
   font-size: 18px;
-  line-height: 28px;
+  white-space: pre-line;
 }
 
 a {
   text-decoration: none;
 }
 
+.section {
+  padding-top: 80px;
+  position: relative;
+  z-index: 10;
+  background: var(--background);
+}
+
 .content {
   width: 85%;
   margin: auto;
 }
-
-.section-padding {
-  padding: 60px 0;
-}
-
 
 
 
