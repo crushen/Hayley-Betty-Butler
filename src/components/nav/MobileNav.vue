@@ -9,7 +9,7 @@
       <nav class="nav" v-if="navActive">
         <a href="#home" class="nav-link animated fadeInRight">Home</a>
         <a href="#collections" class="nav-link animated fadeInRight">Collections</a>
-        <a href="solo-pieces" class="nav-link animated fadeInRight">Solo Pieces</a>
+        <a href="#solo-pieces" class="nav-link animated fadeInRight">Solo Pieces</a>
         <a href="#contact" class="nav-link animated fadeInRight">Contact</a>
       </nav>
     </transition>
