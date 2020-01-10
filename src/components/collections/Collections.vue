@@ -4,10 +4,10 @@
 
       <div class="title">
         <h1>Collections</h1>
-        <div class="line"></div>
       </div>
 
       <div class="collection" v-for="col in collections" :key="col.id">
+        <div class="line"></div>
         <h2>{{ col.title }}</h2>
         <p class="sub-title">{{ col.subTitle }}</p>
         <p class="description">{{ col.description }}</p>
@@ -67,7 +67,7 @@ h1 {
   height: 1px;
   width: 100%;
   background: var(--text);
-  margin-top: 16px;
+  margin: 16px 0 60px 0;
 }
 
 h2 {
@@ -76,7 +76,7 @@ h2 {
 }
 
 .collection {
-  padding: 60px 0 32px 0;
+  padding-bottom: 32px;
   position: relative;
   z-index: 10;
   background: var(--background);
