@@ -63,7 +63,7 @@ a {
   display: none;
 }
 
-h1 {
+.title h1 {
   text-transform: uppercase;
   font-size: 14px;
 }
