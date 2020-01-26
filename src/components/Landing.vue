@@ -1,7 +1,7 @@
 <template>
   <section id="home">
     <div class="background-container" :style="{backgroundImage: `url(${backgroundMobile})`}">
-      <h1>Hayley<br>Betty Butler</h1>
+      <h1>Hayley <br>Betty Butler</h1>
     </div>
     <div class="section bio">
       <div class="content">
@@ -53,6 +53,37 @@ export default {
 
   p:not(:first-of-type) {
     margin-top: 16px;
+  }
+
+  /* Tablet */
+  @media screen and (min-width: 700px) {
+    br {
+      display: none;
+    }
+
+    .background-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    h1 {
+      font-size: 55px;
+      margin-left: 7%;
+    }
+
+    .content {
+      width: 55%;
+      margin: 0 0 0 7%;
+    }
+
+    p:not(:first-of-type) {
+      margin-top: 32px;
+    }
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 1100px) {
+
   }
   
 </style>
