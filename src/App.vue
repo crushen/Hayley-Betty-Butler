@@ -136,12 +136,12 @@ button {
 
 /*Desktop */
 @media screen and (min-width: 1100px) {
-  #mobile-nav {
+  /* #mobile-nav {
     display: none;
   }
   #nav {
     display: block;
-  }
+  } */
 }
 
 </style>

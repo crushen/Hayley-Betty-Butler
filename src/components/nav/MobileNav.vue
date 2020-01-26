@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="nav-bar"></div>
-    <img :src="logo" alt="" class="logo">
-    <div class="burger" @click="toggleNav">
+    <div 
+      class="nav-bar" 
+      :class="{ 'hidden': !showNavbar, 'with-background': lastScrollPosition > 0 }">
+    </div>
+    <img :src="logo" alt="" class="logo" :class="{ 'hidden': !showNavbar }">
+    <div class="burger" @click="toggleNav" :class="{ 'hidden': !showNavbar }">
       <div class="burger-bar"></div>
     </div>
     <transition name="slide" enter-active-class="animated slideInDown faster" leave-active-class="animated slideOutUp faster">
@@ -23,7 +26,9 @@ export default {
   data() {
     return {
       navActive: false,
-      logo
+      logo,
+      showNavbar: true,
+      lastScrollPosition: 0
     }
   },
   methods: {
@@ -36,6 +41,17 @@ export default {
         document.querySelector('.burger').classList.remove('active');
         window.removeEventListener('scroll', noScroll);
       }
+    },
+    onScroll () {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollPosition < 0) {
+        return;
+      }
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 100) {
+        return;
+      }
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition;
+      this.lastScrollPosition = currentScrollPosition;
     }
   },
   watch: {
@@ -44,6 +60,9 @@ export default {
       document.querySelector('.burger').classList.remove('active');
       window.removeEventListener('scroll', noScroll);
     }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll);
   }
   
 }
@@ -76,9 +95,12 @@ function noScroll() {
   .logo {
     width: 60px;
     position: fixed;
-    z-index: 30;
+    z-index: 40;
     top: 13px;
     left: 5%;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: 0.3s ease-out;
   }
 
   .nav-bar {
@@ -87,9 +109,21 @@ function noScroll() {
     right: 0;
     width: 100%;
     height: 60px;
-    z-index: 10;
-    transition: 0.3s;
+    z-index: 20;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: 0.3s ease-out;
   }
+
+  .nav-bar.with-background {
+    background: #0d0d0d;
+  }
+
+  .nav-bar.hidden, .logo.hidden, .burger.hidden {
+    opacity: 0;
+    transform: translate3d(0, -120%, 0);
+}
+
   .burger {
     position: fixed;
     top: 0;
@@ -98,8 +132,10 @@ function noScroll() {
     height: 60px;
     cursor: pointer;
     background: rgba(0,0,0,0);
-    transition: 0.4s;
-    z-index: 30;
+    z-index: 40;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: 0.3s;
   }
   .burger-bar {
     width: 35px;
@@ -146,7 +182,7 @@ function noScroll() {
     align-items: center;
     justify-content: center;
     background: #0d0d0d;
-    z-index: 20;
+    z-index: 30;
   }
   .nav a {
     font-size: 24px;
