@@ -131,7 +131,7 @@ button {
   padding: 6px;
   text-transform: uppercase;
   border-radius: 3px;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 /*Desktop */

@@ -11,7 +11,7 @@
         <img :src="piece.image.url" alt="">
         <p class="img-title">{{ piece.title }}</p>
         <p class="img-description">{{ piece.description }}</p>
-        <button>Enquire</button>
+        <a href="mailto:hayley.butler83@gmail.com"><button>Enquire</button></a>
       </div>
 
     </div>
