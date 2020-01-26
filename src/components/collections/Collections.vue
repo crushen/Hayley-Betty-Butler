@@ -4,10 +4,10 @@
 
       <div class="title">
         <h1>Collections</h1>
+        <div class="line"></div>
       </div>
 
       <div class="collection" v-for="col in collections" :key="col.id">
-        <div class="line"></div>
         <h2>{{ col.title }}</h2>
         <p class="sub-title">{{ col.subTitle }}</p>
         <p class="description">{{ col.description }}</p>

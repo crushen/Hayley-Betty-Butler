@@ -87,6 +87,10 @@ h2 {
   background: var(--background);
 }
 
+.solo-piece {
+  padding-bottom: 0;
+}
+
 .collection:last-of-type, .solo-piece:last-of-type {
   padding-bottom: 0;
 }
