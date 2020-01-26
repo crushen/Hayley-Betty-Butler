@@ -47,12 +47,19 @@ a {
 
 footer {
   padding: 80px 0 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 footer p {
-  font-size: 12px;
+  font-size: 10px;
   padding-bottom: 8px;
   opacity: 0.5;
+}
+
+footer a {
+  margin: 0;
 }
 
 </style>
