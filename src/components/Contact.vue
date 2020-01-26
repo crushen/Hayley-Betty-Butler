@@ -15,7 +15,7 @@
       <a href="mailto:hayley.butler83@gmail.com">hayley.butler83@gmail.com</a>
 
       <footer>
-        <p>&copy;2020 Hayley Betty Butler. All rights reserved.</p>
+        <p>&copy;2020 Hayley Betty Butler.</p>
         <p>Website by <a href="https://charlotterushen.com/">Charlotte Rushen</a></p>
       </footer>
 
