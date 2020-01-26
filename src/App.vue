@@ -135,9 +135,8 @@ button {
 }
 
 @media screen and (min-width: 700px) {
-  p {
-    font-size: 25px;
-  }
+
+
 
   .section {
     padding-top: 100px;

@@ -76,6 +76,10 @@ export default {
       margin: 0 0 0 7%;
     }
 
+      p {
+      font-size: 25px;
+    }
+
     p:not(:first-of-type) {
       margin-top: 32px;
     }
