@@ -71,12 +71,8 @@ export default {
       margin-left: 7%;
     }
 
-    .content {
-      width: 55%;
-      margin: 0 0 0 7%;
-    }
-
-      p {
+    p {
+      margin-right: 35%;
       font-size: 25px;
     }
 

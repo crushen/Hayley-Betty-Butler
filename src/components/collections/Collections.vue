@@ -8,9 +8,11 @@
       </div>
 
       <div class="collection" v-for="col in collections" :key="col.id">
-        <h2>{{ col.title }}</h2>
-        <p class="sub-title">{{ col.subTitle }}</p>
-        <p class="description">{{ col.description }}</p>
+        <div class="collection-text">
+          <h2>{{ col.title }}</h2>
+          <p class="sub-title">{{ col.subTitle }}</p>
+          <p class="description">{{ col.description }}</p>
+        </div>
 
         <div class="gallery" v-for="img in col.galleryItems" :key="img.id">
           <img :src="img.image.url" alt="">
@@ -57,6 +59,20 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (min-width: 700px) {
+  
+  .collection {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 
+  .collection-text, .gallery {
+    width: 45%;
+    max-width: 300px;
+  }
+}
 
 </style>

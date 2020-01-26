@@ -135,11 +135,36 @@ button {
 }
 
 @media screen and (min-width: 700px) {
-
-
-
   .section {
-    padding-top: 100px;
+    padding-top: 140px;
+  }
+
+  .content {
+    max-width: 680px;
+    margin: auto;
+  }
+
+  .line {
+    margin: 16px 0 100px 0;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .sub-title {
+    font-size: 20px;
+    margin-top: 16px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin: 40px 0 0 0;
+  }
+
+  .gallery {
+    margin: 0 0 80px 0;
+    flex: 1 0 auto;
   }
 }
 
@@ -151,6 +176,10 @@ button {
   #nav {
     display: block;
   } */
+
+  .content {
+    max-width: 1195px;
+  }
 }
 
 </style>

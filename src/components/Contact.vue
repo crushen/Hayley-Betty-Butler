@@ -62,4 +62,14 @@ footer a {
   margin: 0;
 }
 
+@media screen and (min-width: 700px) {
+  .section {
+    padding-top: 60px;
+  }
+
+  .line {
+    margin-bottom: 60px;
+  }
+}
+
 </style>
