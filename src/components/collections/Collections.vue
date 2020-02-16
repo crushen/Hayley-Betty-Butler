@@ -66,7 +66,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .collection-text, .gallery {
