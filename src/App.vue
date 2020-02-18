@@ -134,6 +134,17 @@ button {
   margin-top: 16px;
 }
 
+.changeColour {
+  background: white;
+  color: black;
+  transition: 0.6s;
+}
+
+.lineChange {
+  background: black;
+  transition: 0.6s;
+}
+
 @media screen and (min-width: 700px) {
   .section {
     padding-top: 140px;

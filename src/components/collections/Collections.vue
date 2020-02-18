@@ -1,13 +1,23 @@
 <template>
-  <section id="collections" class="section">
+  <section 
+    :class="{ changeColour: scrollPosition > 900 }"
+    id="collections" 
+    class="section">
     <div class="content">
 
       <div class="title">
         <h1>Collections</h1>
-        <div class="line"></div>
+        <div 
+          :class="{ lineChange: scrollPosition > 900 }"
+          class="line">
+        </div>
       </div>
 
-      <div class="collection" v-for="col in collections" :key="col.id">
+      <div 
+        :class="{ changeColour: scrollPosition > 900 }"
+        class="collection" 
+        v-for="col in collections" 
+        :key="col.id">
         <div class="collection-text">
           <h2>{{ col.title }}</h2>
           <p class="sub-title">{{ col.subTitle }}</p>
@@ -54,6 +64,19 @@ export default {
     collections: {
       query: collections
     }
+  },
+  data() {
+    return {
+      scrollPosition: null
+    }
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
   }
 }
 </script>

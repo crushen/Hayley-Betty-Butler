@@ -1,17 +1,26 @@
 <template>
-  <section id="solo-pieces" class="section">
+  <section 
+    :class="{ changeColour: scrollPosition > 900 }"
+    id="solo-pieces" 
+    class="section">
     <div class="content">
 
       <div class="title">
         <h1>Solo Pieces</h1>
-        <div class="line"></div>
+        <div 
+          :class="{ lineChange: scrollPosition > 900 }"
+          class="line">
+        </div>
       </div>
 
-      <div class="wrapper">
+      <div 
+        :class="{ changeColour: scrollPosition > 900 }"
+        class="wrapper">
         <div 
           v-for="piece in soloPieces" 
           :key="piece.id"
-          class="solo-piece gallery">
+          class="solo-piece gallery"
+          :class="{ changeColour: scrollPosition > 900 }">
           <img :src="piece.image.url" alt="">
           <p class="img-title">{{ piece.title }}</p>
           <p class="img-description">{{ piece.description }}</p>
@@ -58,7 +67,16 @@ export default {
   },
   data() {
     return {
+      scrollPosition: null
     }
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
   }
 }
 </script>
